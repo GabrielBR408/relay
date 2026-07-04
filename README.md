@@ -4,7 +4,17 @@ Walkie-talkie + transcription group messaging. One shared channel timeline; each
 consumes it their way — **audio mode** (incoming voice auto-plays, walkie-talkie style) or
 **text mode** (silent; voice arrives as transcripts).
 
-**Live test copy:** https://gabrielbr408.github.io/relay/
+## Where to open it
+
+- **Now, on this Wi-Fi:** `npm run lan` → open `https://<this-pc-ip>:4443` on any phone on
+  the same network (accept the self-signed-certificate warning; needed so the mic works).
+- **Permanent public URL** (one manual step — repo visibility is your call):
+  make the repo public (GitHub → Settings → General → Danger Zone → Change visibility),
+  then in Settings → Pages set Source to "GitHub Actions". The included workflow deploys
+  every push to https://gabrielbr408.github.io/relay/
+- **Or a temporary public URL:** `npm run preview` then, in another terminal,
+  `npx cloudflared tunnel --url http://localhost:4173` — gives an https://…trycloudflare.com
+  link that works anywhere while it runs.
 
 ## Stack
 - Frontend: React + Vite PWA, deployed to GitHub Pages
