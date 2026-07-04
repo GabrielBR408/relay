@@ -1,0 +1,13 @@
+{
+  "name": "Relay",
+  "short_name": "Relay",
+  "description": "Walkie-talkie group messaging with live transcription",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#0f1218",
+  "theme_color": "#0f1218",
+  "icons": [
+    { "src": "./icon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any maskable" }
+  ]
+}
