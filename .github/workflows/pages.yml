@@ -1,7 +1,8 @@
 name: Deploy to GitHub Pages
+# NOTE: Pages is currently configured in "deploy from branch" mode (gh-pages),
+# which is what actually serves the site. This workflow is kept manual-only as
+# an alternative deploy path (requires switching Pages source to GitHub Actions).
 on:
-  push:
-    branches: [main]
   workflow_dispatch:
 
 permissions:

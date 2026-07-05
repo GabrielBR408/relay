@@ -4,17 +4,15 @@ Walkie-talkie + transcription group messaging. One shared channel timeline; each
 consumes it their way — **audio mode** (incoming voice auto-plays, walkie-talkie style) or
 **text mode** (silent; voice arrives as transcripts).
 
-## Where to open it
+**Live:** https://gabrielbr408.github.io/relay/ (GitHub Pages, deploy-from-branch `gh-pages`)
 
-- **Now, on this Wi-Fi:** `npm run lan` → open `https://<this-pc-ip>:4443` on any phone on
-  the same network (accept the self-signed-certificate warning; needed so the mic works).
-- **Permanent public URL** (one manual step — repo visibility is your call):
-  make the repo public (GitHub → Settings → General → Danger Zone → Change visibility),
-  then in Settings → Pages set Source to "GitHub Actions". The included workflow deploys
-  every push to https://gabrielbr408.github.io/relay/
-- **Or a temporary public URL:** `npm run preview` then, in another terminal,
-  `npx cloudflared tunnel --url http://localhost:4173` — gives an https://…trycloudflare.com
-  link that works anywhere while it runs.
+To redeploy after changes:
+```
+npm run build
+# copy dist/ into a checkout of the gh-pages branch, commit, push
+```
+(Alternative: `npm run lan` serves an HTTPS build on the local network at :4443 for
+same-Wi-Fi phone testing.)
 
 ## Stack
 - Frontend: React + Vite PWA, deployed to GitHub Pages
